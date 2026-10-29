@@ -1,0 +1,14 @@
+{
+ "reviewers": [
+  {"id": "1", "comments": [
+    {"id": "1", "text": "Is the covariance estimator still unbiased when the noise is correlated in time?",
+     "anchor": "The covariance-based estimator is unbiased under localization noise"},
+    {"id": "2", "text": "Equation (1): please state the assumption on the motion blur.",
+     "anchors": ["\\hat D = \\frac"]}
+  ]},
+  {"id": "2", "comments": [
+    {"id": "1", "text": "Where does the 30 % figure come from? Please show it.",
+     "anchor": "underestimates $D$ by up to 30 %"}
+  ]}
+ ]
+}

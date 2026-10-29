@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>review-desk</title>
+<link rel="stylesheet" href="static/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="static/app.css">
+<script src="static/vendor/katex/katex.min.js"></script>
+</head>
+<body>
+<header id="top">
+  <div class="brand">review-desk</div>
+  <div id="doc-title"></div>
+  <div id="progress" title=""></div>
+  <div id="agent" class="agent"></div>
+  <div class="actions">
+    <a id="exp-md" href="api/export?format=md" target="_blank" data-i18n="export_md"></a>
+    <a id="exp-tex" href="api/export?format=tex" target="_blank" data-i18n="export_tex"></a>
+  </div>
+</header>
+<div id="banner" hidden></div>
+<main>
+  <article id="paper"><p class="loading">…</p></article>
+  <aside id="side">
+    <nav id="tabs">
+      <button data-tab="inbox"></button>
+      <button data-tab="comments"></button>
+      <button data-tab="notes"></button>
+    </nav>
+    <div id="panel"></div>
+  </aside>
+</main>
+<div id="selbtn" hidden></div>
+<div id="pop" hidden>
+  <div class="pop-quote"></div>
+  <textarea rows="4"></textarea>
+  <div class="pop-row">
+    <select class="pop-ref"></select>
+    <button class="ghost pop-cancel"></button>
+    <button class="primary pop-send"></button>
+  </div>
+</div>
+<script src="static/app.js"></script>
+</body>
+</html>

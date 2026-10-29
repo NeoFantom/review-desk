@@ -1,0 +1,8 @@
+{
+ "paper": "paper.tex",
+ "reviews": "reviews.md",
+ "state": "review-state.json",
+ "port": 8765,
+ "lang": "en",
+ "build_cmd": null
+}
