@@ -105,8 +105,8 @@ lists, code). Figures in PNG/JPG/SVG next to the paper are shown; others
 
 ```markdown
 ## Reviewer 1
-Comment 1: The abstract uses "toggling frame" without definition.
-@anchor: in the toggling frame
+Comment 1: The abstract does not say how the energy error is measured.
+@anchor: keeps the energy error below
 Comment 2: ...
 
 ## Reviewer 2
@@ -164,6 +164,11 @@ Every command accepts `--config`, `--port`, `--url` and `--offline` (work
 on the state file without the server). `build_cmd` in the config (e.g.
 `latexmk -pdf main.tex`) runs after `review-desk build`; the server never
 runs it.
+
+If you start the server on another port with `serve --port N`, give the
+agent-side commands the same `--port N` (or `--url`); otherwise they find
+no server on the default port and silently fall back to the offline state
+file. Setting `"port"` in `review-desk.json` avoids this.
 
 ## Agent compatibility
 
@@ -250,6 +255,6 @@ pip install .
 cd examples/synthetic && review-desk serve     # 打开 http://127.0.0.1:8765/
 ```
 
-自己的论文：`review-desk init main.tex reviews.md`，`review-desk build` 检查锚点，`review-desk serve`；把 `adapters/AGENT_INSTRUCTIONS.md` 放进 `CLAUDE.md` / `AGENTS.md`，让 agent 运行 `review-desk wait`。界面语言在 `review-desk.json` 里设 `"lang": "zh"`。
+自己的论文：`review-desk init main.tex reviews.md`，`review-desk build` 检查锚点，`review-desk serve`；把 `adapters/AGENT_INSTRUCTIONS.md` 放进 `CLAUDE.md` / `AGENTS.md`，让 agent 运行 `review-desk wait`。界面语言在 `review-desk.json` 里设 `"lang": "zh"`。用 `serve --port N` 换端口时，agent 侧命令也要加 `--port N`（或 `--url`），否则会找不到服务器、落到离线状态文件回退；更省事的是在 `review-desk.json` 里设 `"port"`。
 
 ![中文界面](docs/img/desk-zh.png)

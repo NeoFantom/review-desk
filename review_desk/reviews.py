@@ -3,8 +3,8 @@
 Text format (Markdown or .txt), one block per reviewer:
 
     ## Reviewer 1
-    Comment 1: The abstract uses "toggling frame" without definition.
-    @anchor: toggling frame
+    Comment 1: The abstract does not say how the energy error is measured.
+    @anchor: energy error
     Comment 2: ...
 
 A reviewer starts at a line containing "Reviewer N" / "Referee N"
